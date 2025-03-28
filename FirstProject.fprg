@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="FirstProject"/>
+        <attribute name="authors" value="aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-14 10:02:43 "/>
+        <attribute name="created" value="YWx1bm87VVBMMi0wM0I7MjAyNS0wMi0xNDsiMDk6Mjc6MzEgIjsyMjM3"/>
+        <attribute name="edited" value="YWx1bm87VVBMMi0wM0I7MjAyNS0wMi0xNDsiMTA6MDI6NDMgIjsxOzIzMzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1" type="Real" array="False" size=""/>
+            <declare name="nota2" type="Real" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;bem-vindo ao programa&quot;" newline="True"/>
+            <output expression="&quot;digite a sua primeira nota:&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;agora digite a sua segunda nota:&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <assign variable="media" expression="(nota1 + nota2) / 2"/>
+            <output expression="&quot;sua media foi &quot; &amp; (nota1+nota2) / 2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

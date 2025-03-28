@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CalculadoraDeAreas"/>
+        <attribute name="authors" value="aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-14 11:14:58 "/>
+        <attribute name="created" value="YWx1bm87VVBMMi0wM0I7MjAyNS0wMi0xNDsiMTA6MzA6NDAgIjsyMjIz"/>
+        <attribute name="edited" value="YWx1bm87VVBMMi0wM0I7MjAyNS0wMi0xNDsiMTE6MTQ6NTggIjsxOzIzNDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <output expression="&quot;Bem vindo a calculadora de algebra!&quot;" newline="True"/>
+            <output expression="&quot;de qual poligono deseja ver a area?&quot;" newline="True"/>
+            <output expression="&quot;[0] - quadrado&quot;" newline="True"/>
+            <output expression="&quot;[1] - triangulo&quot;" newline="True"/>
+            <output expression="&quot;[2] - cubo&quot;" newline="True"/>
+            <output expression="&quot;[3] - sair&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice = 0">
+                <then>
+                    <declare name="base" type="Integer" array="False" size=""/>
+                    <declare name="altura" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Bora calcular a area do quadrado, sua formula &#233; area=lados&#178;&quot;" newline="True"/>
+                    <output expression="&quot;qual o valor da base?&quot;" newline="True"/>
+                    <input variable="base"/>
+                    <output expression="&quot;qual o valor da altura&quot;" newline="True"/>
+                    <input variable="altura"/>
+                    <output expression="&quot;o area do quadrado &#233; de: &quot; &amp; base*altura" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choice=1">
+                        <then>
+                            <declare name="base" type="Integer" array="False" size=""/>
+                            <declare name="altura" type="Integer" array="False" size=""/>
+                            <output expression="&quot;bora calcula a area do triangulo, sua formula &#233; area=base+altura&quot;" newline="True"/>
+                            <output expression="&quot;qual o valor da base? &quot;" newline="True"/>
+                            <input variable="base"/>
+                            <output expression="&quot;qual o valor da altura? &quot;" newline="True"/>
+                            <input variable="altura"/>
+                            <output expression="&quot;a area do triangulo &#233;: &quot; &amp; (base*altura) / 2" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choice=2">
+                                <then>
+                                    <declare name="aresta" type="Integer" array="False" size=""/>
+                                    <output expression="&quot;Boca calcula a area base do cubo! sua formula &#233; Ab=a&#178;&quot;" newline="True"/>
+                                    <output expression="&quot;digite o valor da aresta:&quot;" newline="True"/>
+                                    <input variable="aresta"/>
+                                    <output expression="&quot;a area base do quadrado &#233;: &quot; &amp; aresta^2" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;obrigado por usar o programa&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Semaforo_com_algoritmo"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-07 10:01:32 "/>
+        <attribute name="created" value="QWx1bm87VVBMMi0wMkE7MjAyNS0wMy0wNzsiMDg6Mjk6MzEgIjsyMjA3"/>
+        <attribute name="edited" value="QWx1bm87VVBMMi0wMkE7MjAyNS0wMy0wNzsiMTA6MDE6MzIgIjsxOzIyOTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;declarar as variaveis do semaforo&quot;" newline="True"/>
+            <declare name="green" type="Integer" array="False" size=""/>
+            <declare name="red" type="Integer" array="False" size=""/>
+            <declare name="yellow" type="Integer" array="False" size=""/>
+            <assign variable="green" expression="13"/>
+            <output expression="&quot;variavel green criada com valor: &quot; &amp; green" newline="True"/>
+            <assign variable="yellow" expression="12"/>
+            <output expression="&quot;variavel yellow criada com valor: &quot; &amp; yellow" newline="True"/>
+            <assign variable="red" expression="11"/>
+            <output expression="&quot;variavel red criada: &quot; &amp; red" newline="True"/>
+            <comment text=""/>
+            <output expression="&quot;funcao do setup:&quot;" newline="True"/>
+            <declare name="pinModeINPUT" type="Integer" array="False" size=""/>
+            <assign variable="pinModeINPUT" expression="8"/>
+            <output expression="&quot;input criado com valor de terminal: &quot;&amp; pinModeINPUT" newline="True"/>
+            <declare name="PinModeOutputGreen" type="Integer" array="False" size=""/>
+            <assign variable="PinModeOutputGreen" expression="13"/>
+            <declare name="PinModeOutputYellow" type="Integer" array="False" size=""/>
+            <assign variable="PinModeOutputYellow" expression="12"/>
+            <declare name="PinModeOutputRed" type="Integer" array="False" size=""/>
+            <assign variable="PinModeOutputRed" expression="11"/>
+            <output expression="&quot;variaveis de output criadas:&quot; &amp;&#13;&#10;&quot;green: &quot; &amp; PinModeOutputGreen &amp;&#13;&#10;&quot;yellow: &quot; &amp; PinModeOutputYellow &amp;&#13;&#10;&quot;red: &quot; &amp; PinModeOutputRed" newline="True"/>
+            <comment text=""/>
+            <output expression="&quot;Funcao loop:&quot;" newline="True"/>
+            <declare name="i" type="Boolean" array="False" size=""/>
+            <assign variable="i" expression="True"/>
+            <output expression="&quot;rodando loop&quot;" newline="True"/>
+            <while expression="i == True">
+                <output expression="&quot;criar condicao de estado para ver se esta em manutencao ou nao&quot;" newline="True"/>
+                <declare name="stade" type="String" array="False" size=""/>
+                <output expression="&quot;deseja colocar o semaforo em manutencao?[sim/nao]&quot;" newline="True"/>
+                <input variable="stade"/>
+                <if expression="stade == &quot;nao&quot;">
+                    <then>
+                        <output expression="&quot;ligar terminal 12&quot;" newline="True"/>
+                        <output expression="&quot;delay de 1 segundo&quot;" newline="True"/>
+                        <output expression="&quot;desligar terminal 12&quot;" newline="True"/>
+                        <output expression="&quot;delay de 1 segundo&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;semaforo funcionando&quot;" newline="True"/>
+                        <output expression="&quot;ligar terminal 13 e desligar os outros&quot;" newline="True"/>
+                        <output expression="&quot;delay de 1 segundo&quot;" newline="True"/>
+                        <output expression="&quot;ligar o terminal 12 e desligar os outros&quot;" newline="True"/>
+                        <output expression="&quot;delay de 1 segundo&quot;" newline="True"/>
+                        <output expression="&quot;ligar terminal 11 e desligar os outros&quot;" newline="True"/>
+                        <output expression="&quot;delay de 1 segundo&quot;" newline="True"/>
+                    </else>
+                </if>
+                <declare name="choice" type="String" array="False" size=""/>
+                <output expression="&quot;deseja rodar o semaforo novamente?[sim/nao]&quot;" newline="True"/>
+                <input variable="choice"/>
+                <if expression="choice == &quot;sim&quot;">
+                    <then/>
+                    <else>
+                        <assign variable="i" expression="False"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;obridado por usar o programa&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cadastro"/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-28 11:24:50 "/>
+        <attribute name="created" value="QWx1bm87VVBMMi0wMkE7MjAyNS0wMi0yMTsiMDg6MTk6MzEgIjsyMjAx"/>
+        <attribute name="edited" value="QWx1bm87VVBMMi0wMkE7MjAyNS0wMi0yODsiMTE6MjQ6NTAgIjszOzIzMDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="sobrenome" type="String" array="False" size=""/>
+            <declare name="cpf" type="String" array="False" size=""/>
+            <declare name="idade" type="Integer" array="False" size=""/>
+            <declare name="cep" type="String" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <output expression="&quot;bem vindo ao cadastro&quot;" newline="True"/>
+            <for variable="count" start="1" end="5" direction="inc" step="1">
+                <output expression="&quot;qual o nome do &quot; &amp; count &amp; &quot; cliente&quot;" newline="True"/>
+                <input variable="nome"/>
+                <output expression="&quot;qual o sobrenome?&quot;" newline="True"/>
+                <input variable="sobrenome"/>
+                <output expression="&quot;qual o cpf?&quot;" newline="True"/>
+                <input variable="cpf"/>
+                <output expression="&quot;qual a idade?&quot;" newline="True"/>
+                <input variable="idade"/>
+                <output expression="&quot;qual o cep? &quot;" newline="True"/>
+                <input variable="cep"/>
+                <output expression="&quot;verifique os dados do &quot; &amp; count &amp; &quot; cliente:&quot;" newline="True"/>
+                <output expression="&quot;seu nome &#233;: &quot; &amp; nome" newline="False"/>
+                <output expression="&quot; &quot; &amp; sobrenome" newline="True"/>
+                <output expression="&quot;seu cpf &#233;: &quot; &amp; cpf" newline="True"/>
+                <output expression="&quot;sua idade &#233;: &quot; &amp; idade" newline="True"/>
+                <output expression="&quot;seu cep &#233;: &quot; &amp; cep" newline="True"/>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+            <output expression="&quot;obrigado por usar o programa&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
